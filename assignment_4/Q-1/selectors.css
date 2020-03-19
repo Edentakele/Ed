@@ -18,7 +18,6 @@ h2{
     color: orange;
 }
 
-
 /* Make all <li> elements blue(pick your own hexadecimal blue)*/ 
 li{
     color: #00004d;
@@ -27,27 +26,26 @@ li{
 /*Change the background on every paragraph to be yellow*/
 p{
     background-color: yellow;
-/* just here */
+
+}
+
 /*Make all inputs have a 3px red border*/
-div.ul.li {
-    border-width: 3px;
-    border-color: red;
+input {
+     border: 3px red solid ;
 }
 /* Give everything with the class 'hello' a white background*/ 
-/*just here*/
-.hello{
+
+.hello {
     background-color: white;
 }
 
 /* Give the element with id 'special' a 2px solid blue border(pick your own rgb blue)*/
-#special{
-    border: 2px blue;
+#special {
+    border: #0000ff solid 2px;
 }
-
 /*Make all the <p>'s that are nested inside of divs 25px font(font-size: 25px)*/
-div.p {
+div p {
     font-size: 25px;
-    background-color: yellow;
 }
 
 /*Make only inputs with type 'text' have a gray background*/
@@ -58,17 +56,14 @@ input[type="text"] {
 
 /* Give both <p>'s inside the 3rd <div> a pink background*/
 
-div p {
-    background-color: pink;
-}
-div :nth-of-type(3)>p{
+div:nth-of-type(3){
     background-color: pink;
 }
 
 /* Give the 2nd <p> inside the 3rd <div> a 5px white border*/
 
-div p:nth-of-type(2){
-    border: 5px solid white;
+div:nth-of-type(3) > p:nth-of-type(2){
+    border: white solid 5px;
 }
 
 /* Make the <em> in the 3rd <div> element white and 20px font(font-size:20px)*/
@@ -79,7 +74,9 @@ div p:nth-of-type(2){
 /*You may need to research some other selectors and properties*/
 
 /*Make all "checked" checkboxes have a left margin of 50px(margin-left: 50px)*/
-
+:checked{
+    margin-left: 50px;
+}
 
 /* Make the <label> elements all UPPERCASE without changing the HTML(definitely look this one up*/
 label {
@@ -88,11 +85,10 @@ label {
 
 /*Make the first letter of the element with id 'special' green and 100px font size(font-size: 100)*/
 
-#special ::first-letter{
-    color: green;
+#special:first-letter{
     font-size: 100px;
+    color: green;
 }
-
 /*Make the <h1> element's color change to blue when hovered over */
 h1:hover {
     background-color: blue;
