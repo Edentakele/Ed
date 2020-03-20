@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>rem is used for seeing disable peoples since it gets resized by the browther itself for the user to make it like he wants it to look</p>
+    <p>Both. Relative for main body text that users are going to have to read a lot of (so they'll want to be able to read it comfortably); Absolute for text that has to be sized to match other elements on the page that are sized in pixels, such as images.
+
+        For relative, ‘%’ and ‘em’ are equally good.
+        
+        For absolute, always use ‘px’. Never use ‘pt’ for on-screen use, it is only sensible for print stylesheets. It is a pity that ‘pt’ is considered the default unit for font-handling because on the web it is the worst possible choice.
+        
+        (ETA: Note that since this answer, CSS3 has redefined the ‘physical units’ so that px and pt are always proportional. So this problem no longer matters unless you are concerned about very old browsers.)
+        
+        Some people don't like the ‘compounding’ effect of relative font sizes. The trick, really, is to use as few font-size changes as you can, to avoid too many nestings. It should be possible to get the relative-to-user's-preferred-size behaviour without the compounding behaviour by using the font-size keywords ‘small’/‘medium’/‘xx-large’/etc., but unfortunately that way you don't get much granularity, and there are still even today differences between how the browsers handle them.
+        
+        </p>
+</body>
+</html>

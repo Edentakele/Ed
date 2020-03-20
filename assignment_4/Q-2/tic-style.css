@@ -1,4 +1,7 @@
-#big{
+body{
+    background-color: brown;
+}
+.big{
     width: 320px;
     height: 320px;
     margin: auto;
@@ -17,7 +20,6 @@ h1{
 .col{
     height: 100px;
     width: 100px;
-    
     float: left;
     font-size: 100px;
     text-align: center;
@@ -30,7 +32,7 @@ h1{
     border-right: 10px solid black;
 }
 .col:hover{
-    background-color: lightblue;
+    background-color: black;
 }
 .border-b{
     border-bottom: 10px solid black;
