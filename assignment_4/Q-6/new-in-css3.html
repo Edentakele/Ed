@@ -6,16 +6,173 @@
     <title>Document</title>
 </head>
 <body>
-    <p>
-       <h1>What’s new in CSS3?</h1>  By Vipul Patel WEBINAR: OnDemand Desktop-as-a-Service Designed for Any Cloud ? Nutanix Frame
-Watch→
-CSS stands for Cascading Styling Sheets, a style sheet language for describing the look and feel of a document written in a markup language like HTML.
-Though CSS can be applied to any document that adheres to XML, it is predominantly used for HTML documents.
-CSS uses simple English words for various style properties, enabling a very simple syntax.
-CSS can be viewed as a list of rules, where each rule consists of one or more selectors (declaration to where the rule should be applied) and what values should be applied.
-CSS3 - what's the big deal Unlike the previous versions of the CSS specification, CSS3 has broken down the specification into smaller "modules". Each module either describes the newer capabilities or changes to the previous specification. One key point here is that backwards compatibility is preserved. As a result of breaking down the specification into smaller pieces, each module is in a distinct state of readiness. There are over 50 CSS modules that are in various states of readiness. For the purpose of providing a quick insight, I am listing the modules here.
-1. Media Queries - enhancement of @media rules and "media" HTML markup element. 2. Selectors Level 3 - describes the element selectors used in CSS 3. Grid template layout - describes new way to position elements using constraints on their alignment to each other and on their flexibility. 4. Aural Style sheets 5. Backgrounds and borders - describes background colors and images and the style of borders. 6. Basic user interface - describes styling for web pages 7. Basic Box model - describes the layout of block-level content in normal flow. 8. Extended Box model - provides extra control over positioning of floats and the size of boxes. 9. Marquee - describes the marquee effect. 10. Cascading and inheritance - describes how values are assigned to properties. 11. Color - describes color-relates aspects of CSS. 12. Fonts - describes fonts and font adjustments. 13. Generated Content for paged media 14. Page floats - contains properties to float elements to the top, bottom or side of a page in paginated renderings. 15. Generated and replaced content - defines how to put content before, after, or in place of an element. 16. Hyperlink - describes styling for hyperlinks. 17. Line layout - describes alignment of text and other boxes within a line. 18. Lists - contains properties for styling lists. 19. Multi-column layout - describes properties to flow content into flexibly-defined columns. 20. Object model - describes programming model. 21. CSSOM View model - describes way to inspect and manipulate the view information of a document. 22. Paged media 23. Positioned layout level 3 - describes ways in CSS to layout parts of a document. 24. Presentation levels - describes ways to step forward/backward through multiple renderings of the same document. 25. Ruby - describes properties to manipulate the positions of "ruby" (small annotations on top of or next to words). 26. Grid Layout - describes how to setup a flexible design grid for an element 27. Regions - describes what can be done with regions 28. Speech - contains properties to specify how a document is rendered by a speech synthesizer. 29. Tables Module - describes the layout of tables. 30. Text - describes the text related properties. 31. Writing Modes - describes the properties that control text direction 32. Line grid - describes text where each symbol in a line is aligned to an invisible grid. 33. Values and units 34. Behavioral extensions to CSS - defines the "binding" property for XBL. 35. Flexible Box layout Level 3 - defines the "flex' and "inner-flex" keywords for the display propert 36. Image values and replaced content - defines how properties can refer to images by URL. 37. Fragmentation Module - describes properties to force or avoid page and column breaks. 38. Transforms - defines 2D and 3D transforms. 39. Transitions - defines a property to animate the transitions between pseudo-classes. 40. Animations - specifies which properties change their values during an animation. 41. Mobile profile 42. TV profile 43. Conditional Rules - defines a number of ways to make style rules depend on factors outside the document, such as output media, the capabilities of the user agent, and the URL of the document 44. Device Adaptation 45. Shapes - defines properties to assign a shape to a CSS box, so that the lengths of the lines inside the box are determined by that shape. 46. Compositing and blending 47. Filter effects - defines graphic filters that can be applied to an element before it has been composited. 48. Masking - provides ways to partially or fully hide portions of visual elements. 49. Box alignment module - defines properties for alignments. 50. Text decoration - defines properties that control the style and position of decorations around text. 51. Intrinsic and extrinsic sizing - defines keywords for use on the width and height properties. 52. Counter Styles - defines rules to support custom numbering styles. 53. Cascading variables - allows arbitrary data to be associated with elements. 54. Overflow module - defines property which specifies how text is treated that is too wide or too tall for its box. 55. Display module 56. Font loading - defines methods to allow a script to explicitly load a font.
-As we can see, there are a whole lot of modules/profiles for CSS3. In the upcoming articles, we will dig deeper into each of these CSS3 modules. Summary In this article, we learned about CSS3 and the list of modules which comprise CSS3. I hope you have found this information useful.
+    <!--lets start-->
+    <div style="border-bottom: 3px black solid; border-top: 3px black solid;">
+        <center>
+        <a href="../../index.html">HOME</a>|
+        <a href="../../contact.html" >CONTACT</a>|
+        <a href="../../gallary.html">GALLARY</a>|
+        <a href="../../mywork.html" target = ”_blank” >MY_WORK</a>|
+        <a href="../../blog.html">BLOG</a>
+        <a href="index.html"><img src="on.jpg" width="100%"; height="100px;"></a>
+            
+    
+        </center>
+        </div>
+ <div style="text-align: center; width: 80%; height: 3000px; border: 5px black solid; margin-left: 150px;">
+    <h1>WHAT IS CSS?</h1>
+              <p>  Cascading Style Sheets (CSS) is a simple mechanism for adding style (e.g., fonts, colors, spacing) to Web documents.
+What is CSS 3?
+CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.1.
+ It brings a lot of new features and additions, like rounded corners, shadows, gradients, transitions or animations,
+  as well as new layouts like multi-columns, flexible box or grid layouts.</p>
+<h1> Now let’s have a look at what’s new!</h1>
+<h2> 1. CSS3 Selectors</h2>
+<p>Selectors are at the heart of CSS. Originally, CSS allowed the matching of elements by type, class, and/or ID.
+     CSS2.1 added pseudo-elements, pseudo-classes, and combinators. With CSS3, we can target almost any element 
+     on the page with a wide range of selectors.
+</p>
+<p>
+CSS2 introduced several attribute selectors. These allow for matching 
+elements based on their attributes. CSS3 expands upon those attribute 
+selectors.Three more attribute selectors were added in CSS3; they allow 
+for substring selection.
+</p>
+
+<p>
+1.Matches any element E whose attribute attr starts with the value val. In other words, the val
+ matches the beginning of the attribute value.
+</p>
+<p>
+2.Matches any element E whose attribute attr ends in val. In other words, the val matches the end of the attribute value.
+</p>
+<p>
+3.Matches any element E whose attribute attr matches val anywhere within the attribute. It is similar to
+ E[attr~=val], except the val can be part of a word.
+</p>                           
+<h2>Pseudo-classes</h2> 
+<p> It’s likely that you’re already familiar with some of the user interaction pseudo-classes,namely 
+    :link, :visited, :hover, :active, and :focus.</p>
+<p>A few more pseudo-class selectors were added in CSS3.
+ One is the :root selector, which allows designers to point to the root element of a document. In HTML,
+  it would be <html>.
+      Since :root is generic, it allows a designer to select the root element of an XML document without
+       necessarily knowing it’s name.
+       To permit scrollbars when needed in a document, this rule would work.
+    </p> 
+<p>As a complement to the :first-child selector, the :last-child was added. With it one can select the last
+     element named of a parent element.
+ For a site with articles contained in <div class=’article’></div> tags, where each has a last paragraph with 
+ some information that needs
+  to be uniformly stylized, this rule would change the font for last paragraph of each article.</p> 
+  <p>
+A new user interaction pseudo-class selector was added, the :target selector. To draw the user’s attention
+ to a span of text when the user clicks on a same-page link, a rule like the first line below would work nicely; 
+ the link would look like the second line, the highlighted span like the third.
+</p>
+<p>
+A functional notation for selecting specified elements that fail
+ a test has been created. The negation pseudo-class selector, 
+ :not can be coupled with almost any other selector that has been
+  implemented. For example to put a border around images that don’t
+   have a border specified, use a rule like this.
+</p>
+<h1> #2. CSS3 Colors</h1>
+<p> CSS3 brings with it support for some new ways of describing colours . Prior to CSS3, 
+    we almost always declared colours using the hexadecimal format (#FFF, or #FFFFFF for white). 
+    It was also possible to declare colours using the rgb() notation, providing either integers (0–255) or percentages.
+The color keyword list has been extended in the CSS3 color module to include 147 additional keyword colors 
+(that are generally well supported), CSS3 also provides us with a number of other options: HSL, HSLA, and RGBA.
+ The most notable change with these new color types is the ability to declare semitransparent colors.
+<h3>1 .RGBA :</h3> 
+<p> RGBA works just like RGB, except that it adds a fourth value: 
+    alpha, the opacity level or alpha transparency level. 
+    The first three values still represent red, green, and blue.
+     For the alpha value, 1 means fully opaque, 0 is fully transparent, 
+     and 0.5 is 50% opaque. You can use any number between 0 and 1 
+     inclusively.
     </p>
+<h3> 2. HSL and HSLA</h3>
+<p>HSL stands for hue, saturation, and lightness. Unlike RGB, where you need to manipulate the saturation or brightness of a color by 
+    changing all three color values in concert, with HSL you can tweak either just the saturation or the lightness while keeping the
+     same base hue. The syntax for HSL comprises an integer value for hue, and percentage values for saturation and lightness.</p>
+<p>The hsl( ) declaration accepts three values:</p> 
+<p>— The hue in degrees from 0 to 359. Some examples are: 0 = red, 60 = yellow, 120= green, 180 = cyan, 240 = blue, and 300 = magenta.</p>
+<p>— The hue in degrees from 0 to 359. Some examples are: 0 = red, 60 = yellow, 120= green, 180 = cyan, 240 = blue, and 300 = magenta.</p>
+<p> — The saturation as a percentage with 100% being the norm. Saturation of 100% will be the full hue, and saturation of 0 will give 
+    you a shade of gray — essentially causing the hue value to be ignored.</p>   
+<p> — A percentage for lightness with 50% being the norm. A lightness of 100% will be white, 50% will be the actual hue, and 0% will 
+    be black.</p>
+<p> The a in hsla( ) here also functions the same way as in rgba( )</p>
+<h3>3.Opacity</h3>
+<p>
+In addition to specifying transparency with HSLA and RGBA colors 
+(and soon, eight-digit hexadecimal values), CSS3 provides us with 
+the opacity property. opacity sets the opaqueness of the element on
+ which it’s declared, similar to alpha.
+</p>
+<p> Though the usage of both alpha and opacity notations seem similar, 
+    when you look at it, there is a key difference in their function.</p>
+<p> While opacity sets the opacity value for an element and all of its children, 
+    a semitransparent RGBA or HSLA color has no impact on the element’s
+     other CSS properties or descendants.
+<h3>#3. Rounded Corners: border-radius</h3>
+</p>
+<p> The border-radius property lets you create rounded corners without 
+the need for images or additional markup. To add rounded corners to 
+our box, we simply add</p>
+<p>
+The border-radius property is actually a shorthand. For our “a” element, the corners are all the same size
+ and symmetrical. If we had wanted different-sized corners, we could declare up to four unique values
+border-radius: 5px 10px 15px 20px;
+</p>
+<h3>
+#4. Drop Shadows
+</h3>
+<p>
+CSS3 provides the ability to add drop shadows to 
+elements using the box-shadow property. This property
+ lets you specify the color, height, width, blur, and
+  offset of one or multiple inner and/or outer drop
+   shadows on your elements.
+</p>
+<h3>
+#5. Text Shadow
+</h3>
+<p>
+text-shadow adds shadows to individual characters 
+in text nodes. Prior to CSS 3, this would be done by 
+either using an image or duplicating a text element and
+ then positioning it.
+</p>
+<h3>
+#6. Linear Gradients
+</h3>
+<p>
+W3C added the syntax for generating linear gradients 
+with CSS3.
+</p>
+<h3>
+#7. Radial Gradients
+</h3>
+<p>
+Radial gradients are circular or elliptical gradients. 
+Rather than proceeding along a straight axis, 
+colors blend out from a starting point in all directions.
+</p>
+<h3>
+#8.Multiple Background Images
+</h3>
+
+<p>
+In CSS3, there’s no need to include an element for every background image;
+ it provides us with the ability to add more than one background image to any element, 
+ even to pseudo-elements.
+</p>
+<p>
+These are the implemented CSS3 features that are new, there are other unimplemented features too , 
+we’ll discuss them once they’re implemented
+</p>
+</div>
 </body>
 </html>

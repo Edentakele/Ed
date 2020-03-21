@@ -4,19 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 500px;
+        }
+        </style>
 </head>
 <body>
-    <p>rem is used for seeing disable peoples since it gets resized by the browther itself for the user to make it like he wants it to look</p>
-    <p>Both. Relative for main body text that users are going to have to read a lot of (so they'll want to be able to read it comfortably); Absolute for text that has to be sized to match other elements on the page that are sized in pixels, such as images.
+    <!--lets start-->
+    <div style="border-bottom: 3px black solid; border-top: 3px black solid; display: flex;">
+        <center>
+        <a href="../../index.html">HOME</a>|
+        <a href="../../contact.html" >CONTACT</a>|
+        <a href="../../gallary.html">GALLARY</a>|
+        <a href="../../mywork.html" target = ”_blank” >MY_WORK</a>|
+        <a href="../../blog.html">BLOG</a>
+        <a href="index.html"><img src="on.jpg" width="100%"; height="100px;"></a>
+            
+    
+        </center>
+        </div>
+ <div style="text-align: center; width: 80%; height: 3000px; border: 5px black solid; margin-left: 150px;">
+        <p><h1><center>CSS UNITS</center></h1>
+        CSS has several different units for expressing a length.
+        Many CSS properties take "length" values, such as width, margin, padding, font-size, etc.
+        Length is a number followed by a length unit, such as 10px, 2em, etc.
+        A whitespace cannot appear between the number and the unit. However, if the value is 0, the unit can be omitted.
 
-        For relative, ‘%’ and ‘em’ are equally good.
-        
-        For absolute, always use ‘px’. Never use ‘pt’ for on-screen use, it is only sensible for print stylesheets. It is a pity that ‘pt’ is considered the default unit for font-handling because on the web it is the worst possible choice.
-        
-        (ETA: Note that since this answer, CSS3 has redefined the ‘physical units’ so that px and pt are always proportional. So this problem no longer matters unless you are concerned about very old browsers.)
-        
-        Some people don't like the ‘compounding’ effect of relative font sizes. The trick, really, is to use as few font-size changes as you can, to avoid too many nestings. It should be possible to get the relative-to-user's-preferred-size behaviour without the compounding behaviour by using the font-size keywords ‘small’/‘medium’/‘xx-large’/etc., but unfortunately that way you don't get much granularity, and there are still even today differences between how the browsers handle them.
-        
-        </p>
+        For some CSS properties, negative lengths are allowed.There are two types of length units: absolute and relative.
+
+<h2><center>Absolute Lengths</center></h2>
+        The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.
+        Absolute length units are not recommended for use on screen, because screen sizes vary so much. However, 
+        they can be used if the output medium is known, such as for print layout.
+        <center><table style="border: 2px black solid;">
+            <tr style="border: 2px black solid;">
+                <td>units</td>
+                <td>Description</td>
+            </tr>
+            <tr>
+                <td>cm</td>
+                <td>centimeters</td>
+            </tr>
+            <tr>
+                <td>mm</td>
+                <td>millimeters</td>
+            </tr>
+            <tr>
+                <td>in</td>
+                <td>inches (1in = 96px = 2.54cm)</td>
+            </tr>
+            <tr>
+                <td>px *</td>
+                <td>pixels (1px = 1/96th of 1in)</td>
+            </tr>
+            <tr>
+                <td>pt</td>
+                <td>points (1pt = 1/72 of 1in)</td>
+            </tr>
+            <tr>
+                <td>pc</td>
+                <td>picas (1pc = 12 pt)</td>
+            </tr>
+        </table></center>
+
+	
+	
+	
+	
+	
+<p>	
+Pixels (px) are relative to the viewing device. For low-dpi devices, 1px is one device pixel (dot) of the display. 
+For printers and high resolution screens 1px implies multiple device pixels.
+</p>
+
+<h2>Relative Lengths</h2>
+<p> Relative length units specify a length relative to another length property. Relative length units scales better between different 
+    rendering mediums.</p>
+<center>
+    <table>
+        <tr>
+            <td>Unit</td>
+            <td>Description</td>
+        </tr>
+        <tr>
+            <td>em</td>
+            <td>Relative to the font-size of the element (2em means 2 times the size of the current font)</td>
+        </tr>
+        <tr>
+            <td>ex</td>
+            <td>Relative to the x-height of the current font (rarely used)</td>
+        </tr>
+        <tr>
+            <td>ch</td>
+            <td>Relative to width of the "0" (zero)</td>
+        </tr>
+        <tr>
+            <td>rem</td>
+            <td>Relative to font-size of the root element</td>
+        </tr>
+        <tr>
+            <td>vw</td>
+            <td>Relative to 1% of the width of the viewport*</td>
+        </tr>
+        <tr>
+            <td>vh</td>
+            <td>Relative to 1% of the height of the viewport*</td>
+        </tr>
+        <tr>
+            <td>vmin</td>
+            <td>Relative to 1% of viewport's* smaller dimension	</td>
+        </tr>
+        <tr>
+            <td>vmax</td>
+            <td>Relative to 1% of viewport's* larger dimension</td>
+        </tr>
+        <tr>
+            <td>%</td>
+            <td>Relative to the parent element</td>
+        </tr>
+    </table>
+</center>
+<h1>Pixels vs. Relative Units in CSS: why it’s still a big deal</h1>
+<h2>Long live the modern browser!</h2>
+
+<p>Browsers are getting better these days.
+     We seem to be in a golden age where there’s a never-ending stream of new features added for the benefit of the users accessing the page, 
+     and really great tools for those creating the page. It hasn’t always been the case, though. </p>
+     <p>
+     Earlier versions of today’s browsers had limited features, and we had to consider how to work with — or around— those when 
+     designing and developing our sites.</p>
+     <p>
+     Static and adaptive layouts were commonplace, and our sites were designed to pixel perfection.
+    </p>
+
+    <p>
+      Of course there was a distinct amount of pixel pushing gymnastics involved, though, when implementing our layouts 
+      within the constraints the browsers provided.
+    </p>
+    <p>
+    As browser features matured, and techniques like Fluid Grids became more commonplace, 
+    the way we coded our sites evolved into a whole new paradigm. 
+</p>
+<p>
+    We switched from defining and coding our units of measurement in pixels, and began using relative CSS 
+    units and unitless values more consistently in our CSS to meet the needs of ever-changing viewport sizes.
+</p>
+<p>
+    Fast forward to the present, and browser vendors have added in more features to allow us to create flexible 
+    and robust designs in a straightforward manner. 
+</p>Take for example, browser zooming. When the user zooms the page in 
+    a modern browser, everything scales up — or down — proportionally, depending on the user’s preference. Well, at least it should.</p>
+<h2>Why is browser zoom a big deal, anyway?</h2>
+<p>Allowing the user to control their web browsing experience isn’t a new concept, in fact it’s something that’s been written about
+     in the web’s early days. Lately, that concept seems to have been forgotten as the browser features have improved.</p>
+<p>
+    The most important reason for using responsive and unitless values in our CSS is for supporting our users that rely on zooming. 
+    If you read the Web Content Accessibility Guidelines, our users need to be able to zoom the viewport without loss of content or 
+    functionality, or restrictions imposed by CSS values or viewport scaling settings. In particular, there are a some success criteria 
+    to be met:
+</p>
+    
+<p>WCAG 1.4.4: Users must be able to resize text without assistive technology up to 200 percent, without loss of content or functionality. (Level AA)</p>
+<p>WCAG 1.4.8: Ideally, we should provide appropriate spacing between lines and paragraphs, and we shouldn’t be requiring the user to scroll horizontally to read a line of text on a full-screen window. (Level AAA)</p>
+<p>WCAG 1.4.10: Users must be able to resize text without being forced to scroll both horizontally and vertically to read that content. (Level AA)</p>
+</div>
+    </div>
+<div>
+
 </body>
 </html>
